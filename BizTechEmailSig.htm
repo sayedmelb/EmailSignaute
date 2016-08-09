@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Signature</title>
+   </head>
+   <body><!-- comment syed  This is a non-standard html code signature that fits in mac and win os with inline styles-->
+      <font style="font-family:'Helvetica', sans-serif; font-size: 9pt; color:#646869; ">
+         <table width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
+            <tr>
+               <td colspan="8" style="width:350px" width="350px">
+                  <font style="font-weight:bolder;font-size:10pt; color:#00AEEF;"><span id='empName'></span>, <span id='empTitle'></span></font>
+                  <br />
+                  <br/>
+                  <img src="http://uat.btes.com.au/images/BizTechLogo.png" style='height:60px; margin-left:0px;'>	
+                  
+                     <br />
+				   <font style="font-weight:500;font-size:9pt; color:#646869; text-decoration: none;">E.&nbsp; johnd@btes.com.au</font>
+                     <br />
+					<font style="font-weight:500;font-size:9pt; color:#646869;">	 
+                     T.&nbsp; <span id='teleId'></span>
+                     <br />
+                     M.&nbsp; <span id='mobileId'></span>	
+                     <br />
+                     <hr />
+                  </font>
+                  <font style="font-size:9pt; color:#646869;">www.btes.com.au
+                  <br/>		
+                  <span id='addId'></span>
+                  <br />
+                  </font>
+                  <hr />
+               </td>
+            </tr>
+         </table>
+      </font>
+	   <script type="text/javascript">
+		   function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+		   var teleId = getParameterByName('teleId');
+		    var mobileId = getParameterByName('mobileId');
+		    var addId = getParameterByName('addId');
+		   var empName = getParameterByName('empName');
+		    var empTitle = getParameterByName('empTitle');
+		   document.getElementById('teleId').innerHTML= teleId;
+		   document.getElementById('mobileId').innerHTML= mobileId;
+		   document.getElementById('addId').innerHTML= addId;
+		    document.getElementById('empName').innerHTML= empName;
+		   document.getElementById('empTitle').innerHTML= empTitle;
+		//alert(teleId);
+	   </script>
+   </body>
+</html>
+
